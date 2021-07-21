@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
         backgroundColor: 'black',
         opacity: 0.4,
         width: '100%',
-        height: '30%',
+        height: '40%',
     },
     zipCode: {
         paddingTop: 30,
