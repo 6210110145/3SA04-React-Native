@@ -7,6 +7,8 @@ export default function Weather(props) {
         main: 'main',
         description: 'decription',
         temp: 0,
+        pressure: 0,
+        humidity: 0,
     })
 
     useEffect(() => {
@@ -19,6 +21,8 @@ export default function Weather(props) {
                         main: json.weather[0].main,
                         description: json.weather[0].description,
                         temp: json.main.temp,
+                        pressure: json.main.pressure,
+                        humidity: json.main.humidity,
                     });
                 })
                 .catch((error) => {
@@ -55,7 +59,7 @@ const styles = StyleSheet.create({
         paddingRight: 50,
         opacity: 0.3,
         width: '100%',
-        height: '40%',
+        height: '45%',
     },
     zipCode: {
         paddingTop: 30,
