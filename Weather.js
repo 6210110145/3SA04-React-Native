@@ -5,8 +5,8 @@ import Forecast from './Forecast'
 export default function Weather(props) {
     const [forecastInfo, setForecastInfo] = useState({
         main: 'main',
-        decription: 'decription',
-        temp: 0
+        decription: '-',
+        temp: 0,
     })
 
     useEffect(() => {
@@ -18,7 +18,7 @@ export default function Weather(props) {
                     setForecastInfo({
                         main: json.weather[0].main,
                         description: json.weather[0].description,
-                        temp: json.main.temp
+                        temp: json.main.temp,
                     });
                 })
                 .catch((error) => {
@@ -52,7 +52,8 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'center',
         backgroundColor: 'black',
-        opacity: 0.4,
+        paddingRight: 50,
+        opacity: 0.3,
         width: '100%',
         height: '40%',
     },
