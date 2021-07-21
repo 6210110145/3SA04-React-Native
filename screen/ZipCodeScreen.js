@@ -25,6 +25,11 @@ export default function ZipCodeScreen(){
     return (
         <View>
             <ImageBackground source={require('../sky.jpg')} style={styles.backdrop}>
+                <View style={styles.head}>
+                    <Text style={styles.headsize}> Place</Text>
+                    <Text style={styles.headsize}> Code</Text>
+                </View>
+                
                 <FlatList
                     data={availableZipItems}
                     keyExtractor={item => item.code}
@@ -56,4 +61,16 @@ const styles = StyleSheet.create({
         width: '100%',
         height: '100%',
     },
+    head:{
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        paddingRight: 17,
+        paddingLeft: 15,
+        backgroundColor: 'black',
+        height: '4%',
+    },
+    headsize:{
+        fontSize: 20,
+        color: 'white'
+    }
 })

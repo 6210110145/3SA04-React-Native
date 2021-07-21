@@ -5,7 +5,7 @@ import Forecast from './Forecast'
 export default function Weather(props) {
     const [forecastInfo, setForecastInfo] = useState({
         main: 'main',
-        decription: '-',
+        description: 'decription',
         temp: 0,
     })
 
@@ -61,6 +61,7 @@ const styles = StyleSheet.create({
         paddingTop: 30,
         fontSize: 15,
         color: 'white',
+        paddingLeft: 50
     }
 });
    
